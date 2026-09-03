@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub | Marks</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<aside class="sidebar">
+
+    <div class="logo">
+        <div class="logo-box">S</div>
+        <span>StudentHub</span>
+    </div>
+
+    <nav>
+        <a href="index.html">🏠 Dashboard</a>
+        <a href="students.html">👨‍🎓 Students</a>
+        <a href="courses.html">📚 Courses</a>
+        <a href="attendance.html">✓ Attendance</a>
+        <a href="marks.html" class="active">📊 Marks</a>
+    </nav>
+
+    <div class="sidebar-user">
+        <div class="user-avatar">A</div>
+        <div>
+            <strong>Administrator</strong>
+            <small>System Admin</small>
+        </div>
+    </div>
+
+</aside>
+
+
+<main class="main-content">
+
+    <header class="topbar">
+
+        <div>
+            <p class="eyebrow">ACADEMICS</p>
+            <h1>Marks & Results</h1>
+            <p class="subtitle">View student academic performance.</p>
+        </div>
+
+        <select class="header-select">
+            <option>Semester 5</option>
+            <option>Semester 4</option>
+            <option>Semester 3</option>
+        </select>
+
+    </header>
+
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+            <div class="stat-icon purple">🏆</div>
+            <div>
+                <span>Average Score</span>
+                <h2>82.6%</h2>
+                <small class="up">↑ 5.1%</small>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon green">✓</div>
+            <div>
+                <span>Passed Students</span>
+                <h2>231</h2>
+                <small>93.1% pass rate</small>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon orange">⭐</div>
+            <div>
+                <span>Top Score</span>
+                <h2>96.4%</h2>
+                <small>Arjun Kumar</small>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="panel">
+
+        <div class="toolbar">
+
+            <div>
+                <h3>Student Results</h3>
+                <p>Semester 5 examination results</p>
+            </div>
+
+            <input
+                type="text"
+                class="search"
+                placeholder="🔍 Search student..."
+                onkeyup="searchTable(this)"
+            >
+
+        </div>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>ID</th>
+                        <th>Programming</th>
+                        <th>Database</th>
+                        <th>Networks</th>
+                        <th>Average</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td><strong>Arjun Kumar</strong></td>
+                        <td>STU001</td>
+                        <td>94</td>
+                        <td>96</td>
+                        <td>99</td>
+                        <td><strong>96.4%</strong></td>
+                        <td><span class="grade a-plus">A+</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Priya Sharma</strong></td>
+                        <td>STU002</td>
+                        <td>88</td>
+                        <td>91</td>
+                        <td>86</td>
+                        <td><strong>88.3%</strong></td>
+                        <td><span class="grade a">A</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Rahul Kumar</strong></td>
+                        <td>STU003</td>
+                        <td>82</td>
+                        <td>85</td>
+                        <td>79</td>
+                        <td><strong>82.0%</strong></td>
+                        <td><span class="grade a">A</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Sneha Nair</strong></td>
+                        <td>STU004</td>
+                        <td>71</td>
+                        <td>75</td>
+                        <td>69</td>
+                        <td><strong>71.6%</strong></td>
+                        <td><span class="grade b">B</span></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

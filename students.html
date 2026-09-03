@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub | Students</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<aside class="sidebar">
+    <div class="logo">
+        <div class="logo-box">S</div>
+        <span>StudentHub</span>
+    </div>
+
+    <nav>
+        <a href="index.html">🏠 Dashboard</a>
+        <a href="students.html" class="active">👨‍🎓 Students</a>
+        <a href="courses.html">📚 Courses</a>
+        <a href="attendance.html">✓ Attendance</a>
+        <a href="marks.html">📊 Marks</a>
+    </nav>
+
+    <div class="sidebar-user">
+        <div class="user-avatar">A</div>
+        <div>
+            <strong>Administrator</strong>
+            <small>System Admin</small>
+        </div>
+    </div>
+</aside>
+
+<main class="main-content">
+
+    <header class="topbar">
+        <div>
+            <p class="eyebrow">MANAGEMENT</p>
+            <h1>Students</h1>
+            <p class="subtitle">Manage registered students and their information.</p>
+        </div>
+
+        <button class="primary-btn" onclick="openStudentModal()">
+            + Add Student
+        </button>
+    </header>
+
+    <section class="panel">
+
+        <div class="toolbar">
+            <div>
+                <h3>All Students</h3>
+                <p>248 registered students</p>
+            </div>
+
+            <input
+                type="text"
+                id="studentSearch"
+                class="search"
+                placeholder="🔍 Search students..."
+                onkeyup="searchStudents()"
+            >
+        </div>
+
+        <div class="table-wrapper">
+
+            <table id="studentTable">
+
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>ID</th>
+                        <th>Course</th>
+                        <th>Email</th>
+                        <th>Year</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>
+                            <div class="student-info">
+                                <div class="student-avatar">AK</div>
+                                <div>
+                                    <strong>Arjun Kumar</strong>
+                                    <small>Chennai</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td>STU001</td>
+                        <td>Computer Science</td>
+                        <td>arjun@email.com</td>
+                        <td>3rd Year</td>
+                        <td><span class="badge success">Active</span></td>
+                        <td>
+                            <button class="delete-btn" onclick="deleteStudent(this)">Delete</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="student-info">
+                                <div class="student-avatar purple-bg">PS</div>
+                                <div>
+                                    <strong>Priya Sharma</strong>
+                                    <small>Chennai</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td>STU002</td>
+                        <td>Information Technology</td>
+                        <td>priya@email.com</td>
+                        <td>2nd Year</td>
+                        <td><span class="badge success">Active</span></td>
+                        <td>
+                            <button class="delete-btn" onclick="deleteStudent(this)">Delete</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="student-info">
+                                <div class="student-avatar green-bg">RK</div>
+                                <div>
+                                    <strong>Rahul Kumar</strong>
+                                    <small>Bangalore</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td>STU003</td>
+                        <td>Data Science</td>
+                        <td>rahul@email.com</td>
+                        <td>4th Year</td>
+                        <td><span class="badge success">Active</span></td>
+                        <td>
+                            <button class="delete-btn" onclick="deleteStudent(this)">Delete</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="student-info">
+                                <div class="student-avatar orange-bg">SN</div>
+                                <div>
+                                    <strong>Sneha Nair</strong>
+                                    <small>Kochi</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td>STU004</td>
+                        <td>Computer Applications</td>
+                        <td>sneha@email.com</td>
+                        <td>1st Year</td>
+                        <td><span class="badge warning">Pending</span></td>
+                        <td>
+                            <button class="delete-btn" onclick="deleteStudent(this)">Delete</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </section>
+
+</main>
+
+
+<div class="modal" id="studentModal">
+
+    <div class="modal-box">
+
+        <div class="modal-header">
+            <div>
+                <h2>Add New Student</h2>
+                <p>Enter student information</p>
+            </div>
+
+            <button onclick="closeStudentModal()" class="close-btn">×</button>
+        </div>
+
+        <form onsubmit="addStudent(event)">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="studentName" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Student ID</label>
+                    <input type="text" id="studentId" placeholder="STU005" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="studentEmail" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Course</label>
+                    <select id="studentCourse">
+                        <option>Computer Science</option>
+                        <option>Information Technology</option>
+                        <option>Data Science</option>
+                        <option>Computer Applications</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Year</label>
+                    <select id="studentYear">
+                        <option>1st Year</option>
+                        <option>2nd Year</option>
+                        <option>3rd Year</option>
+                        <option>4th Year</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="modal-actions">
+                <button type="button" class="secondary-btn" onclick="closeStudentModal()">
+                    Cancel
+                </button>
+
+                <button type="submit" class="primary-btn">
+                    Add Student
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

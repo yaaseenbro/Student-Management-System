@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub | Courses</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<aside class="sidebar">
+
+    <div class="logo">
+        <div class="logo-box">S</div>
+        <span>StudentHub</span>
+    </div>
+
+    <nav>
+        <a href="index.html">🏠 Dashboard</a>
+        <a href="students.html">👨‍🎓 Students</a>
+        <a href="courses.html" class="active">📚 Courses</a>
+        <a href="attendance.html">✓ Attendance</a>
+        <a href="marks.html">📊 Marks</a>
+    </nav>
+
+    <div class="sidebar-user">
+        <div class="user-avatar">A</div>
+        <div>
+            <strong>Administrator</strong>
+            <small>System Admin</small>
+        </div>
+    </div>
+
+</aside>
+
+<main class="main-content">
+
+    <header class="topbar">
+
+        <div>
+            <p class="eyebrow">ACADEMICS</p>
+            <h1>Courses</h1>
+            <p class="subtitle">View and manage available courses.</p>
+        </div>
+
+        <button class="primary-btn" onclick="addCourse()">
+            + Add Course
+        </button>
+
+    </header>
+
+
+    <section class="course-grid">
+
+        <div class="course-card">
+            <div class="course-top">
+                <div class="course-icon blue">💻</div>
+                <span class="course-code">CS101</span>
+            </div>
+
+            <h3>Computer Science</h3>
+            <p>Learn programming, algorithms, databases and software development.</p>
+
+            <div class="course-info">
+                <span>👨‍🎓 82 Students</span>
+                <span>📅 4 Years</span>
+            </div>
+
+            <div class="course-footer">
+                <span class="badge success">Active</span>
+                <button class="small-btn">View Details</button>
+            </div>
+        </div>
+
+
+        <div class="course-card">
+            <div class="course-top">
+                <div class="course-icon purple">🌐</div>
+                <span class="course-code">IT201</span>
+            </div>
+
+            <h3>Information Technology</h3>
+            <p>Explore networks, web technologies, cloud computing and IT systems.</p>
+
+            <div class="course-info">
+                <span>👨‍🎓 65 Students</span>
+                <span>📅 4 Years</span>
+            </div>
+
+            <div class="course-footer">
+                <span class="badge success">Active</span>
+                <button class="small-btn">View Details</button>
+            </div>
+        </div>
+
+
+        <div class="course-card">
+            <div class="course-top">
+                <div class="course-icon green">📊</div>
+                <span class="course-code">DS301</span>
+            </div>
+
+            <h3>Data Science</h3>
+            <p>Study data analysis, statistics, visualization and machine learning.</p>
+
+            <div class="course-info">
+                <span>👨‍🎓 54 Students</span>
+                <span>📅 4 Years</span>
+            </div>
+
+            <div class="course-footer">
+                <span class="badge success">Active</span>
+                <button class="small-btn">View Details</button>
+            </div>
+        </div>
+
+
+        <div class="course-card">
+            <div class="course-top">
+                <div class="course-icon orange">🖥️</div>
+                <span class="course-code">CA401</span>
+            </div>
+
+            <h3>Computer Applications</h3>
+            <p>Learn application development, databases and modern computing.</p>
+
+            <div class="course-info">
+                <span>👨‍🎓 47 Students</span>
+                <span>📅 3 Years</span>
+            </div>
+
+            <div class="course-footer">
+                <span class="badge success">Active</span>
+                <button class="small-btn">View Details</button>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

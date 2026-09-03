@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub | Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<aside class="sidebar">
+    <div class="logo">
+        <div class="logo-box">S</div>
+        <span>StudentHub</span>
+    </div>
+
+    <nav>
+        <a href="index.html" class="active">🏠 Dashboard</a>
+        <a href="students.html">👨‍🎓 Students</a>
+        <a href="courses.html">📚 Courses</a>
+        <a href="attendance.html">✓ Attendance</a>
+        <a href="marks.html">📊 Marks</a>
+    </nav>
+
+    <div class="sidebar-user">
+        <div class="user-avatar">A</div>
+        <div>
+            <strong>Administrator</strong>
+            <small>System Admin</small>
+        </div>
+    </div>
+</aside>
+
+<main class="main-content">
+
+    <header class="topbar">
+        <div>
+            <p class="eyebrow">STUDENT MANAGEMENT SYSTEM</p>
+            <h1>Dashboard</h1>
+            <p class="subtitle">Welcome back! Here's what's happening today.</p>
+        </div>
+
+        <div class="top-right">
+            <button class="notification" onclick="showNotification()">🔔</button>
+            <div class="profile-avatar">A</div>
+        </div>
+    </header>
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+            <div class="stat-icon blue">👨‍🎓</div>
+            <div>
+                <span>Total Students</span>
+                <h2 id="totalStudents">248</h2>
+                <small class="up">↑ 12% this month</small>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon purple">📚</div>
+            <div>
+                <span>Total Courses</span>
+                <h2>18</h2>
+                <small class="up">↑ 2 new courses</small>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon green">✓</div>
+            <div>
+                <span>Avg. Attendance</span>
+                <h2>87.4%</h2>
+                <small class="up">↑ 3.2% this month</small>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon orange">📈</div>
+            <div>
+                <span>Avg. Performance</span>
+                <h2>82.6%</h2>
+                <small class="up">↑ 5.1% this semester</small>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="content-grid">
+
+        <div class="panel wide">
+            <div class="panel-heading">
+                <div>
+                    <h3>Recent Students</h3>
+                    <p>Recently registered students</p>
+                </div>
+                <a href="students.html" class="view-all">View All →</a>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student</th>
+                            <th>ID</th>
+                            <th>Course</th>
+                            <th>Year</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="student-info">
+                                    <div class="student-avatar">AK</div>
+                                    <div>
+                                        <strong>Arjun Kumar</strong>
+                                        <small>arjun@email.com</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>STU001</td>
+                            <td>Computer Science</td>
+                            <td>3rd Year</td>
+                            <td><span class="badge success">Active</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="student-info">
+                                    <div class="student-avatar purple-bg">PS</div>
+                                    <div>
+                                        <strong>Priya Sharma</strong>
+                                        <small>priya@email.com</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>STU002</td>
+                            <td>Information Technology</td>
+                            <td>2nd Year</td>
+                            <td><span class="badge success">Active</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="student-info">
+                                    <div class="student-avatar green-bg">RK</div>
+                                    <div>
+                                        <strong>Rahul Kumar</strong>
+                                        <small>rahul@email.com</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>STU003</td>
+                            <td>Data Science</td>
+                            <td>4th Year</td>
+                            <td><span class="badge success">Active</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="student-info">
+                                    <div class="student-avatar orange-bg">SN</div>
+                                    <div>
+                                        <strong>Sneha Nair</strong>
+                                        <small>sneha@email.com</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>STU004</td>
+                            <td>Computer Applications</td>
+                            <td>1st Year</td>
+                            <td><span class="badge warning">Pending</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-heading">
+                <div>
+                    <h3>Quick Actions</h3>
+                    <p>Manage your system</p>
+                </div>
+            </div>
+
+            <div class="quick-actions">
+
+                <a href="students.html" class="quick-action">
+                    <div class="action-icon blue">＋</div>
+                    <div>
+                        <strong>Add Student</strong>
+                        <small>Register a student</small>
+                    </div>
+                    <span>→</span>
+                </a>
+
+                <a href="courses.html" class="quick-action">
+                    <div class="action-icon purple">📚</div>
+                    <div>
+                        <strong>Courses</strong>
+                        <small>Manage courses</small>
+                    </div>
+                    <span>→</span>
+                </a>
+
+                <a href="attendance.html" class="quick-action">
+                    <div class="action-icon green">✓</div>
+                    <div>
+                        <strong>Attendance</strong>
+                        <small>Track attendance</small>
+                    </div>
+                    <span>→</span>
+                </a>
+
+                <a href="marks.html" class="quick-action">
+                    <div class="action-icon orange">📊</div>
+                    <div>
+                        <strong>Results</strong>
+                        <small>View marks</small>
+                    </div>
+                    <span>→</span>
+                </a>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="panel performance-panel">
+
+        <div class="panel-heading">
+            <div>
+                <h3>Academic Performance</h3>
+                <p>Average performance by department</p>
+            </div>
+
+            <select>
+                <option>Current Semester</option>
+                <option>Previous Semester</option>
+            </select>
+        </div>
+
+        <div class="performance-grid">
+
+            <div class="performance-item">
+                <div class="performance-title">
+                    <span>Computer Science</span>
+                    <strong>88%</strong>
+                </div>
+                <div class="progress">
+                    <div style="width:88%"></div>
+                </div>
+            </div>
+
+            <div class="performance-item">
+                <div class="performance-title">
+                    <span>Information Technology</span>
+                    <strong>84%</strong>
+                </div>
+                <div class="progress">
+                    <div style="width:84%"></div>
+                </div>
+            </div>
+
+            <div class="performance-item">
+                <div class="performance-title">
+                    <span>Data Science</span>
+                    <strong>81%</strong>
+                </div>
+                <div class="progress">
+                    <div style="width:81%"></div>
+                </div>
+            </div>
+
+            <div class="performance-item">
+                <div class="performance-title">
+                    <span>Computer Applications</span>
+                    <strong>76%</strong>
+                </div>
+                <div class="progress">
+                    <div style="width:76%"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 StudentHub • Student Management System
+    </footer>
+
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

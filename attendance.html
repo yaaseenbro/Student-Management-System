@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub | Attendance</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<aside class="sidebar">
+
+    <div class="logo">
+        <div class="logo-box">S</div>
+        <span>StudentHub</span>
+    </div>
+
+    <nav>
+        <a href="index.html">🏠 Dashboard</a>
+        <a href="students.html">👨‍🎓 Students</a>
+        <a href="courses.html">📚 Courses</a>
+        <a href="attendance.html" class="active">✓ Attendance</a>
+        <a href="marks.html">📊 Marks</a>
+    </nav>
+
+    <div class="sidebar-user">
+        <div class="user-avatar">A</div>
+        <div>
+            <strong>Administrator</strong>
+            <small>System Admin</small>
+        </div>
+    </div>
+
+</aside>
+
+
+<main class="main-content">
+
+    <header class="topbar">
+
+        <div>
+            <p class="eyebrow">ACADEMICS</p>
+            <h1>Attendance</h1>
+            <p class="subtitle">Monitor student attendance records.</p>
+        </div>
+
+        <select class="header-select">
+            <option>September 2026</option>
+            <option>August 2026</option>
+            <option>July 2026</option>
+        </select>
+
+    </header>
+
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+            <div class="stat-icon green">✓</div>
+            <div>
+                <span>Average Attendance</span>
+                <h2>87.4%</h2>
+                <small class="up">Good performance</small>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon blue">👨‍🎓</div>
+            <div>
+                <span>Present Today</span>
+                <h2>221</h2>
+                <small>Out of 248 students</small>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon orange">⚠</div>
+            <div>
+                <span>Low Attendance</span>
+                <h2>18</h2>
+                <small class="down">Needs attention</small>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="panel">
+
+        <div class="toolbar">
+
+            <div>
+                <h3>Student Attendance</h3>
+                <p>Current attendance records</p>
+            </div>
+
+            <input
+                type="text"
+                class="search"
+                placeholder="🔍 Search student..."
+                onkeyup="searchTable(this)"
+            >
+
+        </div>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>ID</th>
+                        <th>Course</th>
+                        <th>Total Classes</th>
+                        <th>Present</th>
+                        <th>Absent</th>
+                        <th>Attendance</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td><strong>Arjun Kumar</strong></td>
+                        <td>STU001</td>
+                        <td>Computer Science</td>
+                        <td>42</td>
+                        <td>39</td>
+                        <td>3</td>
+                        <td>
+                            <div class="attendance-cell">
+                                <strong>92.8%</strong>
+                                <div class="mini-progress">
+                                    <div style="width:92.8%"></div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Priya Sharma</strong></td>
+                        <td>STU002</td>
+                        <td>Information Technology</td>
+                        <td>42</td>
+                        <td>37</td>
+                        <td>5</td>
+                        <td>
+                            <div class="attendance-cell">
+                                <strong>88.1%</strong>
+                                <div class="mini-progress">
+                                    <div style="width:88.1%"></div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Rahul Kumar</strong></td>
+                        <td>STU003</td>
+                        <td>Data Science</td>
+                        <td>42</td>
+                        <td>34</td>
+                        <td>8</td>
+                        <td>
+                            <div class="attendance-cell">
+                                <strong>81.0%</strong>
+                                <div class="mini-progress">
+                                    <div style="width:81%"></div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Sneha Nair</strong></td>
+                        <td>STU004</td>
+                        <td>Computer Applications</td>
+                        <td>42</td>
+                        <td>28</td>
+                        <td>14</td>
+                        <td>
+                            <div class="attendance-cell low">
+                                <strong>66.7%</strong>
+                                <div class="mini-progress">
+                                    <div style="width:66.7%"></div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>
